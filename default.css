@@ -1,0 +1,177 @@
+/* 1 */
+head {
+    box-sizing: border-box;
+    margin-left: 20em;
+    display: block;
+    max-width: 800px;
+
+    /* width: calc(100%-20em); */
+    z-index: 9999;
+}
+
+title {
+    display: block;
+    font-size: 2em;
+    font-family: sans;
+    color: #2A97B0;
+    text-align: center;
+    background: #287789;
+    z-index: 9999;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #3568B9;
+    height: auto;
+}
+
+.main dt {
+    border-top: 1px #3568B9 solid;
+}
+
+.main {
+    box-sizing: border-box;
+    background-color: #2C4670;
+    color: #2A97B0;
+    font-family: serif;
+    display: block;
+    margin: 0;
+    margin-left: 20em;
+    padding: 3ex;
+    max-width: 800px;
+    position: relative;
+}
+
+.main > pre > code {
+    display: block;
+    color: #23344F;
+    background-color: #307BB5;
+    box-shadow: 5px 5px #294F6D;
+}
+
+.main p {
+    text-indent: 3em;
+}
+
+.main p::first-letter {
+    font-size: 120%;
+    text-shadow: 3px 2px #23344F;
+    text-transform: uppercase;
+}
+
+.main h1, h2, h3, h4.h5, h6 {
+    clear: both;
+    font-family: sans-serif;
+}
+
+.main h1 {
+    color: #3568B9;
+    letter-spacing: 0.2cm
+}
+
+.main h2 {
+    color: #325792;
+}
+
+.main h3 {
+    color: #23344F;
+}
+
+.main h4 {
+    color: #171F2D;
+}
+
+.main h5 {
+    color: #ff99b3;
+}
+
+.main h6 {
+    color: #ffff99;
+}
+
+
+/* 2*/
+.main table {
+    color: white;
+    border-collapse: collapse;
+}
+
+.main tr.title > td {
+    background-color: rgba(255, 255, 255, 0.07);
+    height: 4ex;
+    text-align: center;
+}
+
+.main table td {
+    border: 1px solid #307BB5;
+}
+
+.main table tfoot, thead {
+    text-transform: uppercase;
+}
+
+.main table .tab-mass {
+    width: 8em;
+    background-color: #294F6D;
+}
+
+.main table .tab-dimen {
+    width: 5em;
+    background-color: #307BB5;
+}
+
+.main table .tab-name {
+    width: 12em;
+    background-color: #2D648E;
+}
+
+.main table .different {
+    text-align: center;
+    text-decoration: line-through;
+    font-size: x-large;
+    color: #307BB5;
+    background-color: #307BB5;
+    height: 5ex;
+}
+
+
+/* 3 */
+.main ol {
+    list-style-type: upper-roman;
+}
+
+.main ol > li > ol {
+    list-style-type: lower-roman;
+}
+
+.main ol > li > ol > li > ol {
+    list-style-type: lower-greek;
+}
+
+
+.main img {
+    display: block;
+    filter: opacity(50%) drop-shadow(0 0 0 #2A97B0);
+    max-width: 50%;
+    width: 13.5em;
+    margin: 1.3ex;
+}
+
+.main img:nth-of-type(even) {
+    clear: left;
+    float: left;
+}
+
+.main img:nth-of-type(odd) {
+    float: right;
+    clear: right;
+}
+
+img.validator {
+    clear: both !important;
+    float: none !important;
+    display: inline !important;
+    width: 88px !important;
+    opacity: 0.2 !important;
+}

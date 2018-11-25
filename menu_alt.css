@@ -1,0 +1,98 @@
+.menu {
+    font-family: sans-serif;
+    display: block;
+    position: fixed;
+    top: 2.5em;
+    left: 0;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    background-color: #255C69;
+    z-index: 99;
+}
+
+.menu ul {
+    position: relative;
+    padding: 0;
+    margin: 0;
+    list-style-type: none;
+}
+
+.menu > ul > li {
+    float: left;
+    display: block;
+}
+
+.menu > ul > li a {
+    min-width: 17em;
+    text-align: center;
+}
+
+.menu a {
+    cursor: default;
+    text-decoration: none;
+    font-family: fantasy;
+    color: #2A97B0;
+    display: inline-block;
+    padding: 0.2em;
+    padding-top: 0.7em;
+    padding-bottom: 0em;
+    height: 4ex;
+    background-color: #287789;
+}
+
+.menu li > ul > li a {
+    text-align: justify;
+    clear: both;
+    display: block;
+    background-color: #255C69;
+}
+
+.active > a {
+    background-color: #2A97B0;
+    color: #287789;
+}
+
+.menu a:hover {
+    background-color: #2A97B0;
+    color: #287789;
+}
+
+.menu .dropdown-container {
+    display: block;
+}
+
+.menu .dropdown-container .dropdown {
+    display: none;
+    z-index: 1;
+}
+
+@keyframes open {
+    from {
+        opacity: 0;
+        height: 0;
+        display: none;
+    }
+    to {
+        opacity: 1;
+        display: block;
+    }
+}
+
+.menu .dropdown-container:hover .dropdown {
+    display: block;
+    position: fixed;
+
+}
+
+.menu .dropdown-container .dropdown li, a {
+    animation-name: open;
+    animation-direction: reverse;
+    animation-duration: 0.5s;
+}
+
+.menu .dropdown-container:hover .dropdown li, a {
+    animation-name: open;
+    animation-duration: 0.5s;
+    animation-direction: normal;
+}

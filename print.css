@@ -1,0 +1,163 @@
+/* 1 */
+head {
+    display: block;
+}
+
+title {
+    display: block;
+    font-size: 14pt;
+    font-family: serif;
+    text-align: center;
+    z-index: 999;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    height: auto;
+}
+
+.menu {
+    display: none;
+}
+
+.main {
+    font-family: serif;
+    font-size: 11pt;
+    display: block;
+    margin: 1.5cm;
+    padding: 0;
+    padding: 1ex;
+}
+
+.main p {
+    text-indent: 2.5em;
+    page-break-inside: avoid;
+}
+
+.main > pre {
+    page-break-inside: avoid;
+}
+
+.main > pre > code {
+    font-size: 10pt;
+}
+
+.main p::first-letter {
+    font-size: 110%;
+    text-transform: uppercase;
+}
+
+.main h1, h2, h3, h4, h5, h6 {
+    clear: both;
+    font-family: sans-serif;
+    page-break-inside: avoid;
+    page-break-after: avoid;
+}
+
+.main h1 {
+    font-size: 17pt;
+    letter-spacing: 0.1cm;
+    page-break-before: always;
+}
+
+.main h1:first-of-type {
+    page-break-before: avoid;
+}
+
+.main h2 {
+    font-size: 15pt;
+}
+
+.main h3 {
+    font-size: 14pt;
+}
+
+.main h4 {
+    font-size: 12pt;
+}
+
+.main h5 {
+    font-size: 10pt;
+}
+
+.main h6 {
+    font-size: 10pt;
+}
+
+
+/* 2*/
+.main table {
+    page-break-inside: avoid;
+    border-collapse: collapse;
+}
+
+.main tr.title > td {
+    height: 4ex;
+    text-align: center;
+}
+
+.main table td {
+    border: 1px solid black;
+}
+
+.main table tfoot, thead {
+    text-transform: uppercase;
+}
+
+.main table .tab-mass {
+    width: 8em;
+}
+
+.main table .tab-dimen {
+    width: 5em;
+}
+
+.main table .tab-name {
+    width: 12em;
+}
+
+.main table .different {
+    display: none;
+}
+
+
+/* 3 */
+.main ol {
+    page-break-inside: avoid;
+    list-style-type: upper-roman;
+}
+
+.main ol > li > ol {
+    list-style-type: lower-roman;
+}
+
+.main ol > li > ol > li > ol {
+    list-style-type: lower-greek;
+}
+
+
+.main img {
+    page-break-inside: avoid;
+    display: block;
+    width: 10em;
+    margin: 1.3ex;
+}
+
+.main img:nth-of-type(even) {
+    clear: left;
+    float: left;
+}
+
+.main img:nth-of-type(odd) {
+    float: right;
+    clear: right;
+}
+
+#obrazek {
+    display: none;
+}
+
+img.validator {
+    display: none;
+}

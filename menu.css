@@ -1,0 +1,149 @@
+
+.menu {
+    font-family: sans-serif;
+    display: block;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 20em;
+    margin: 0;
+    padding: 0;
+    height: 35ex;
+    /*   height: 100%; */
+    background-color: #255C69;
+}
+
+.menu ul {
+    padding: 0;
+    margin: 0;
+    list-style-type: none;
+}
+
+.menu > ul li {
+    width: 100%;
+}
+
+.menu > ul > li a {
+    cursor: default;
+    width: 100%;
+    text-align: center;
+}
+
+.menu a {
+    text-decoration: none;
+    font-family: fantasy;
+    color: #2A97B0;
+    background-color: #287789;
+    display: inline-block;
+    padding: 0;
+    height: 4ex;
+}
+
+.menu li > ul > li a {
+    text-align: justify;
+    background-color: #255C69;
+}
+
+.active > a {
+    background-color: #2A97B0;
+    color: #287789;
+}
+
+.menu a:hover {
+    background-color: #2A97B0;
+    color: #287789;
+}
+
+.menu .dropdown-container {
+    display: inline-block;
+}
+
+.menu .dropdown {
+    display: none;
+    z-index: 1;
+}
+
+.menu .dropdown-container:hover .dropdown {
+    display: block;
+}
+
+.menu .dropdown-container:hover .dropdown a {
+    animation-name: over;
+    animation-duration: 0.15s;
+}
+
+@keyframes open {
+    from {
+        width: 0;
+    }
+    to {
+        width: 20em;
+    }
+}
+
+@keyframes close {
+    from {
+        height: 100%;
+        width: 20em;
+        display: block;
+    }
+    to {
+        height: 100%;
+        width: 0em;
+        display: none;
+    }
+}
+
+@keyframes over {
+    from {
+        background-color: #2A97B0;
+    }
+    to {
+        background-color: #287789;
+    }
+}
+
+@media screen and (max-width: 800px) {
+    .menu > ul::before {
+        content: "Menu";
+        color: #2A97B0;
+        background-color: #287789;
+        height: 4ex;
+        display: inline-block;
+        width: 6em;
+    }
+
+    .menu {
+        animation-name: close;
+        animation-duration: 0.2s;
+        top: 2em;
+        height: 0;
+        width: 0;
+        z-index: 90;
+    }
+
+    .menu > ul:hover::before {
+        background-color: #2A97B0;
+        color: #287789;
+    }
+
+    .main, head {
+        margin-left: 0em;
+    }
+
+    .menu:hover {
+        width: 20em;
+        height: 100%;
+        animation-name: open;
+        animation-duration: 0.2s;
+    }
+
+
+    .menu > ul a {
+        display: none;
+    }
+
+    .menu:hover a {
+        display: block;
+    }
+}
