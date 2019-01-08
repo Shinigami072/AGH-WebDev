@@ -1,0 +1,85 @@
+ul.posts{
+    margin:0;
+    padding:0;
+}
+h1{
+    text-align: center;
+}
+.desc{
+    display: block;
+}
+.user{
+    font-size: smaller;
+    font-weight: bold;
+}
+.desc .user{
+    display: block;
+}
+ul.blogs{
+    list-style: none;
+}
+.menu ul{
+    margin: 0;
+    list-style: none;
+}
+.menu li{
+    display: inline-block;
+}
+.menu a{
+    text-decoration: none;
+}
+.posts .user{
+    display: inline-block;
+
+    position: relative;
+    top: -1em;
+    left: 1em;
+
+}
+.content{
+    display: block;
+    font-style: normal;
+}
+.date{
+    display: block;
+    font-size: small;
+    text-align: right;
+    font-style: italic;
+}
+.files a{
+    text-decoration: none;
+    color: black;
+}
+.post{
+    border: 1px gray solid;
+}
+.post h2{
+    font-size: smaller;
+}
+.comments{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.comments a{
+    display: block;
+    text-align: right;
+}
+ul.comments>li:nth-child(2n){
+    display: block;
+    background-color: lightgray;
+}
+.commentPozytywna,.commentNegatywna,.commentNeutralna{
+    display: block;
+    border: 1px gray solid;
+    border-collapse: collapse;
+
+}
+.commentPozytywna{
+    color: green;
+}
+.commentNegatywna{
+    color: red;
+    display: block;
+}
