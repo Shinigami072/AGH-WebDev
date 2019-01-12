@@ -30,7 +30,7 @@
     <label for="time">Godzina:</label><br/>
     <input name="time" id="time" type="text" value="<?php echo date("H:i")?>" readonly="readonly"/><br/>
     <label for="files0">Choose file to upload</label>
-    <input type="file" id="files0" name="files[0]"/>
+    <input type="file" id="files0" name="files[0]" onchange="addFiles(this)"/>
     <input type="file" id="files1" name="files[1]"/>
     <input type="file" id="files2" name="files[2]"/>
     <input type="submit" value="Utwórz"/>

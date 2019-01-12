@@ -97,7 +97,11 @@ function createPost($path, $name, $data)
         for ($i = 0, $j = 0; $i < $file_count; $i++) {
             if ($data["files"]["error"][$i] == 0) {
                 $ext = pathinfo($data["files"]["name"][$i], PATHINFO_EXTENSION);
-                move_uploaded_file($data["files"]["tmp_name"][$i], "$path/$name$j.$ext");
+                if(strlen($ext)>0)
+                    move_uploaded_file($data["files"]["tmp_name"][$i], "$path/$name$j.$ext");
+                else
+                    move_uploaded_file($data["files"]["tmp_name"][$i], "$path/$name$j");
+
                 $j++;
             }
         }
