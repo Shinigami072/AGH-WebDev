@@ -7,9 +7,9 @@ let fileCount =0;
 function validateAll() {
     let fields = ["blogentry", "user", "password"];
     for (var field in fields) {
-        var val=getFieldValue(field);
+        var val=getFieldValue(fields[field]);
         if(val ===null || val.length===0){
-            alert("nie wypołniono odpowiedniego pola ("+field+")");
+            alert("nie wypołniono odpowiedniego pola ("+fields[field]+")");
             return false;
         }
     }
@@ -66,10 +66,11 @@ function getFormattedDate(date) {
     "0" + m: m)
     +"-" + (d < 10 ? "0" + d : d);
 }
+function reset(){
+    document.forms[0].reset();
+    loadFormData();
+
+}
 function loadFormData() {
     setDate();
-    let fields = ["blogentry", "user", "password"];
-    for (var field in fields) {
-
-    }
 }

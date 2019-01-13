@@ -18,7 +18,7 @@
     <p><?php echo $_GET["err"]?></p>
 <?php }?>
 <script src="validateWpis.js" language="JavaScript"></script>
-<form action="wpis.php" enctype="multipart/form-data" method="post" onreset="loadFormData();return false;" onsubmit="return validateAll()" >
+<form action="wpis.php" enctype="multipart/form-data" method="post" onsubmit="return validateAll()" >
     <label for="blogentry">Treść:</label><br/>
     <textarea name="blogentry" id="blogentry" cols="80" rows="10"><?php echo $_GET["blogentry"]?></textarea><br/>
     <label for="user">Nazwa Użytkownika:</label><br/>
@@ -34,7 +34,7 @@
         <input type="file" id="files0" name="files[0]" onchange="addFiles(this)"/>
     </div>
     <input type="submit" value="Utwórz"/>
-    <input type="reset" value="Wyczyść"/>
+    <input type="button" value="Wyczyść" onclick="reset()"/>
 </form>
 
 </body>

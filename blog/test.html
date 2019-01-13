@@ -6,34 +6,46 @@
 <head>
     <meta http-equiv="content-type" content="application/xhtml+xml; charset =utf-8"/>
     <link type="text/css" rel="stylesheet" href="Basic.css"/>
+    <link type="text/css" rel="stylesheet" title="Default" href="Default.css"/>
+    <link type="text/css" rel="stylesheet alternative" title="Alternative"  href="BasicRed.css"/>
     <title>Tworzenie Wpisu</title>
 </head>
-<body onload="loadFormData()">
+<body onload="recreateList();messenger()">
+<script src="styleList.js" language="JavaScript"></script>
+<ul id="styleList"></ul>
+<div id="comms">
+<form name="msg" action="dialog" onsubmit="send(this);return false;" onreset="return false;">
+    <input type="checkbox" name="active" onchange="statusChange(this)" value="false"/>
+    <input type="text" name="username"/>
+    <input type="text" name="msg"/>
+    <input type="submit" value="Wyślij"/><br/>
+    <textarea id="chat" rows="10" cols="30"></textarea>
 
-<?php include("Menu.xhtml")?>
+</form></div>
+<!--<?php include("Menu.xhtml")?>-->
 
-<?php if(isset($_GET["err"])){?>
-<p><?php echo $_GET["err"]?></p>
-<?php }?>
-<script src="validateWpis.js" language="JavaScript"></script>
-<form action="http://borg.kis.agh.edu.pl/~staskrzy/blog/wpis.php" enctype="multipart/form-data" method="post" onreset="loadFormData();return false;" onsubmit="return validateAll()">
-    <label for="blogentry">Treść:</label><br/>
-    <textarea name="blogentry" id="blogentry" cols="80" rows="10"></textarea><br/>
-    <label for="user">Nazwa Użytkownika:</label><br/>
-    <input name="user" id="user" type="text" value=""/><br/>
-    <label for="password">Hasło:</label><br/>
-    <input name="password" id="password" type="password"/><br/>
-    <label for="date">Data:</label><br/>
-    <input name="date" id="date" onchange="setDate()"/><br/>
-    <label for="time">Godzina:</label><br/>
-    <input name="time" id="time" type="text" value="" readonly="readonly"/><br/>
-    <label for="files0">Choose file to upload</label>
-    <div class="files">
-    <input type="file" id="files0" name="files[0]" onchange="addFiles(this)"/>
-    </div>
-    <input type="submit" value="Utwórz"/>
-    <input type="reset" value="Wyczyść"/>
-</form>
+<!--<?php if(isset($_GET["err"])){?>-->
+<!--<p><?php echo $_GET["err"]?></p>-->
+<!--<?php }?>-->
+<!--<script src="validateWpis.js" language="JavaScript"></script>-->
+<!--<form action="http://borg.kis.agh.edu.pl/~staskrzy/blog/wpis.php" enctype="multipart/form-data" method="post" onreset="loadFormData();return false;" onsubmit="return validateAll()">-->
+    <!--<label for="blogentry">Treść:</label><br/>-->
+    <!--<textarea name="blogentry" id="blogentry" cols="80" rows="10"></textarea><br/>-->
+    <!--<label for="user">Nazwa Użytkownika:</label><br/>-->
+    <!--<input name="user" id="user" type="text" value=""/><br/>-->
+    <!--<label for="password">Hasło:</label><br/>-->
+    <!--<input name="password" id="password" type="password"/><br/>-->
+    <!--<label for="date">Data:</label><br/>-->
+    <!--<input name="date" id="date" onchange="setDate()"/><br/>-->
+    <!--<label for="time">Godzina:</label><br/>-->
+    <!--<input name="time" id="time" type="text" value="" readonly="readonly"/><br/>-->
+    <!--<label for="files0">Choose file to upload</label>-->
+    <!--<div class="files">-->
+    <!--<input type="file" id="files0" name="files[0]" onchange="addFiles(this)"/>-->
+    <!--</div>-->
+    <!--<input type="submit" value="Utwórz"/>-->
+    <!--<input type="reset" value="Wyczyść"/>-->
+<!--</form>-->
 
 </body>
 </html>
